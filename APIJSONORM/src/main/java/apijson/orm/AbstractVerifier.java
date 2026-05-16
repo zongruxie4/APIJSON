@@ -14,6 +14,7 @@ import static apijson.RequestMethod.HEAD;
 import static apijson.RequestMethod.HEADS;
 import static apijson.RequestMethod.POST;
 import static apijson.RequestMethod.PUT;
+import static apijson.orm.AbstractFunctionParser.ENABLE_SCRIPT_FUNCTION;
 import static apijson.orm.Operation.*;
 //import static apijson.orm.Operation.CODE;
 
@@ -1339,6 +1340,11 @@ public abstract class AbstractVerifier<T, M extends Map<String, Object>, L exten
 	}
 
 	public static ScriptEngine getScriptEngine(String lang) {
+		if (ENABLE_SCRIPT_FUNCTION == false) {
+			throw new UnsupportedOperationException("AbstractFunctionParser.ENABLE_SCRIPT_FUNCTION" +
+					" == false 时不支持执行脚本！如需支持则设置为 true ！");
+		}
+
 		boolean isEmpty = StringUtil.isEmpty(lang, true);
 		ScriptEngine engine = isEmpty ? SCRIPT_ENGINE : SCRIPT_ENGINE_MANAGER.getEngineByName(lang);
 
