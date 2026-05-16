@@ -142,8 +142,6 @@ public abstract class AbstractSQLConfig<T, M extends Map<String, Object>, L exte
 		CONFIG_TABLE_LIST.add(Request.class.getSimpleName());
 		CONFIG_TABLE_LIST.add(Access.class.getSimpleName());
 		CONFIG_TABLE_LIST.add(Document.class.getSimpleName());
-		CONFIG_TABLE_LIST.add(TestRecord.class.getSimpleName());
-
 
 		DATABASE_LIST = new ArrayList<>();
 		DATABASE_LIST.add(DATABASE_MYSQL);

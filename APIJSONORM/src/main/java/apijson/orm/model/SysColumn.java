@@ -7,10 +7,13 @@ package apijson.orm.model;
 
 import apijson.MethodAccess;
 
+import static apijson.orm.AbstractVerifier.ADMIN;
+import static apijson.orm.AbstractVerifier.LOGIN;
+
 /**SQL Server 在 sys 下的字段(列名)
  * @author Lemon
  */
-@MethodAccess(POST = {}, PUT = {}, DELETE = {})
+@MethodAccess(GET = {LOGIN, ADMIN}, HEAD = {LOGIN, ADMIN}, POST = {}, PUT = {}, DELETE = {})
 public class SysColumn {
 	public static final String TAG = "SysColumn";
 	public static final String TABLE_NAME = "columns";

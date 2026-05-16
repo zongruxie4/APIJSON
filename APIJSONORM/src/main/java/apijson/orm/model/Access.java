@@ -7,9 +7,13 @@ package apijson.orm.model;
 
 import apijson.MethodAccess;
 
+import static apijson.orm.AbstractVerifier.ADMIN;
+import static apijson.orm.AbstractVerifier.LOGIN;
+
 /**访问权限
  * @author Lemon
  */
-@MethodAccess(POST = {}, PUT = {}, DELETE = {})
+@MethodAccess(GET = {LOGIN, ADMIN}, HEAD = {LOGIN, ADMIN}, POST = {}, PUT = {}, DELETE = {})
+//@ConfigMethodAccess
 public class Access {
 }

@@ -48,7 +48,6 @@ import apijson.orm.model.AllTable;
 import apijson.orm.model.AllColumn;
 import apijson.orm.model.AllTableComment;
 import apijson.orm.model.AllColumnComment;
-import apijson.orm.model.TestRecord;
 
 import javax.script.ScriptEngine;
 import javax.script.ScriptEngineManager;
@@ -174,7 +173,6 @@ public abstract class AbstractVerifier<T, M extends Map<String, Object>, L exten
 			SYSTEM_ACCESS_MAP.put(ExtendedProperty.class.getSimpleName(), getAccessMap(ExtendedProperty.class.getAnnotation(MethodAccess.class)));
 
 			SYSTEM_ACCESS_MAP.put(Document.class.getSimpleName(), getAccessMap(Document.class.getAnnotation(MethodAccess.class)));
-			SYSTEM_ACCESS_MAP.put(TestRecord.class.getSimpleName(), getAccessMap(TestRecord.class.getAnnotation(MethodAccess.class)));
 		}
 
 		ACCESS_MAP = new HashMap<>(SYSTEM_ACCESS_MAP);

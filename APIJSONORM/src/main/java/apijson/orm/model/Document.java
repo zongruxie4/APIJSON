@@ -17,10 +17,10 @@ import apijson.MethodAccess;
  * @author Lemon
  */
 @MethodAccess(
-		GET = { LOGIN, ADMIN }, 
-		HEAD = { LOGIN, ADMIN },
-		PUT = { LOGIN, ADMIN }
-		)
+	GET = { LOGIN, ADMIN },
+	HEAD = { LOGIN, ADMIN },
+	PUT = { LOGIN, ADMIN }
+)
 public class Document implements Serializable {
 	private static final long serialVersionUID = 1L;
 

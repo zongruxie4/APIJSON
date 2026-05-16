@@ -7,10 +7,13 @@ package apijson.orm.model;
 
 import apijson.MethodAccess;
 
+import static apijson.orm.AbstractVerifier.ADMIN;
+import static apijson.orm.AbstractVerifier.LOGIN;
+
 /**表属性
  * @author Lemon
  */
-@MethodAccess(POST = {}, PUT = {}, DELETE = {})
+@MethodAccess(GET = {LOGIN, ADMIN}, HEAD = {LOGIN, ADMIN}, POST = {}, PUT = {}, DELETE = {})
 public class Table {
 	public static final String TAG = "Table";
 	public static final String TABLE_NAME = "tables";
